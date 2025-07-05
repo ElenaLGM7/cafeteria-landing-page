@@ -1,5 +1,17 @@
 {
-  "title": "Cafetería DoceLunas",
-  "welcomeTitle": "Bienvenid@ a DoceLunas",
-  "welcomeText": "Disfruta del mejor café en un entorno acogedor y con productos artesanales."
+  "pageTitle": "Cafetería Delicias",
+  "welcomeTitle": "Bienvenid@ a Cafetería Delicias",
+  "welcomeText": "Disfruta del mejor café en un entorno acogedor y con productos artesanales.",
+  "navInicio": "Inicio",
+  "navMenu": "Menú",
+  "navContacto": "Contacto",
+  "aboutUsTitle": "Sobre Nosotros",
+  "aboutUsText": "En Cafetería Delicias te ofrecemos una experiencia única con nuestros cafés seleccionados y nuestra repostería artesanal.",
+  "menuTitle": "Nuestro Menú",
+  "item1": "Pastel de Chocolate - 3.50€",
+  "item2": "Croissant - 2.00€",
+  "contactTitle": "Contacto",
+  "address": "📍 Dirección: Calle Dulce, 123 - Ciudad Café",
+  "phone": "📞 Teléfono: 123 456 789",
+  "footerText": "© 2025 Cafetería Delicias - Todos los derechos reservados"
 }
