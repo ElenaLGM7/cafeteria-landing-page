@@ -1,5 +1,17 @@
 {
-  "title": "DoceLunas Coffee Shop",
-  "welcomeTitle": "Welcome to DoceLunas",
-  "welcomeText": "Enjoy the best coffee in a cozy atmosphere with artisanal products."
+  "pageTitle": "Delicias Coffee Shop",
+  "welcomeTitle": "Welcome to Delicias Coffee Shop",
+  "welcomeText": "Enjoy the best coffee in a cozy atmosphere with handmade products.",
+  "navInicio": "Home",
+  "navMenu": "Menu",
+  "navContacto": "Contact",
+  "aboutUsTitle": "About Us",
+  "aboutUsText": "At Delicias, we offer a unique experience with selected coffees and handmade pastries.",
+  "menuTitle": "Our Menu",
+  "item1": "Chocolate Cake - €3.50",
+  "item2": "Croissant - €2.00",
+  "contactTitle": "Contact",
+  "address": "📍 Address: Calle Dulce, 123 - Coffee City",
+  "phone": "📞 Phone: 123 456 789",
+  "footerText": "© 2025 Delicias Coffee Shop - All rights reserved"
 }
