@@ -1,5 +1,17 @@
 {
-  "title": "Cafetería DoceLuas",
-  "welcomeTitle": "Benvid@ a DoceLuas",
-  "welcomeText": "Goza do mellor café nun ambiente acolledor con produtos artesáns."
+  "pageTitle": "Cafetería Delicias",
+  "welcomeTitle": "Benvid@ á Cafetería Delicias",
+  "welcomeText": "Goza do mellor café nun ambiente acolledor e con produtos artesáns.",
+  "navInicio": "Inicio",
+  "navMenu": "Menú",
+  "navContacto": "Contacto",
+  "aboutUsTitle": "Sobre Nós",
+  "aboutUsText": "Na Cafetería Delicias ofrecémosche unha experiencia única cos nosos cafés seleccionados e a nosa repostería artesanal.",
+  "menuTitle": "O noso Menú",
+  "item1": "Torta de Chocolate - 3,50€",
+  "item2": "Croissant - 2,00€",
+  "contactTitle": "Contacto",
+  "address": "📍 Dirección: Rúa Doce, 123 - Cidade Café",
+  "phone": "📞 Teléfono: 123 456 789",
+  "footerText": "© 2025 Cafetería Delicias - Todos os dereitos reservados"
 }
