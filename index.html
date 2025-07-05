@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title>Cafetería Delicias</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="pageTitle">Cafetería Delicias</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<h1 data-i18n="welcomeTitle">Bienvenid@ a Cafetería Delicias</h1>
-<p data-i18n="welcomeText">Disfruta del mejor café en un entorno acogedor y con productos artesanales.</p>
-    <header>
-        <h1>Bienvenido a Cafetería Delicias</h1>
-        <p>El mejor café y los dulces más exquisitos</p>
-    </header>
+  <header class="bg-dark text-white p-3 d-flex justify-content-between align-items-center">
+    <h1 data-i18n="welcomeTitle">Bienvenid@ a Cafetería Delicias</h1>
+    <select id="language-selector" class="form-select w-auto">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="gl">Galego</option>
+    </select>
+  </header>
+
+  <main>
+    <section id="intro">
+      <p data-i18n="welcomeText">Disfruta del mejor café en un entorno acogedor y con productos artesanales.</p>
+    </section>
 
     <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#menu">Menú</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+      <ul>
+        <li><a href="#inicio" data-i18n="navInicio">Inicio</a></li>
+        <li><a href="#menu" data-i18n="navMenu">Menú</a></li>
+        <li><a href="#contacto" data-i18n="navContacto">Contacto</a></li>
+      </ul>
     </nav>
 
     <section id="inicio">
-        <h2>Sobre Nosotros</h2>
-        <p>En Cafetería Delicias te ofrecemos una experiencia única con nuestros cafés seleccionados y nuestra repostería artesanal.</p>
-        <img src="coffee.jpg" alt="Café recién hecho">
+      <h2 data-i18n="aboutUsTitle">Sobre Nosotros</h2>
+      <p data-i18n="aboutUsText">
+        En Cafetería Delicias te ofrecemos una experiencia única con nuestros cafés seleccionados y nuestra repostería artesanal.
+      </p>
+      <img src="coffee.jpg" alt="Café recién hecho" />
     </section>
 
     <section id="menu">
-        <h2>Nuestro Menú</h2>
-        <div class="menu-item">
-            <img src="pastel.jpg" alt="Pastel de chocolate">
-            <p>Pastel de Chocolate - 3.50€</p>
-        </div>
-        <div class="menu-item">
-            <img src="croissant.jpg" alt="Croissant">
-            <p>Croissant - 2.00€</p>
-        </div>
+      <h2 data-i18n="menuTitle">Nuestro Menú</h2>
+      <div class="menu-item">
+        <img src="pastel.jpg" alt="Pastel de chocolate" />
+        <p data-i18n="item1">Pastel de Chocolate - 3.50€</p>
+      </div>
+      <div class="menu-item">
+        <img src="croissant.jpg" alt="Croissant" />
+        <p data-i18n="item2">Croissant - 2.00€</p>
+      </div>
     </section>
 
     <section id="contacto">
-        <h2>Contacto</h2>
-        <p>📍 Dirección: Calle Dulce, 123 - Ciudad Café</p>
-        <p>📞 Teléfono: 123 456 789</p>
+      <h2 data-i18n="contactTitle">Contacto</h2>
+      <p data-i18n="address">📍 Dirección: Calle Dulce, 123 - Ciudad Café</p>
+      <p data-i18n="phone">📞 Teléfono: 123 456 789</p>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Cafetería Delicias - Todos los derechos reservados</p>
-    </footer>
+  <footer>
+    <p data-i18n="footerText">&copy; 2025 Cafetería Delicias - Todos los derechos reservados</p>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
