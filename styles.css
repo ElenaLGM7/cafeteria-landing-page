@@ -1,66 +1,129 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f1e5;
-    color: #5a3e2b;
+/* styles.css — Premium Artesanal */
+:root{
+  --cafe: #6B4B3A;
+  --cream: #F8F4EF;
+  --white: #FFFFFF;
+  --accent: #C9A27E;
+  --beige: #E6D8C3;
+  --muted: #6B5E57;
+  --radius: 14px;
+  --container: 1100px;
+  --transition: 220ms ease;
+  --shadow: 0 8px 24px rgba(20,18,16,0.08);
+  --max-width: 1200px;
+  --break-md: 992px;
+  --break-sm: 600px;
 }
 
-/* Estilos del encabezado */
-header {
-    text-align: center;
-    background-color: #8B5A2B;
-    color: white;
-    padding: 20px;
+/* Reset minimal */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--cafe);
+  background:var(--cream);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  font-size:16px;
 }
 
-nav {
-    background-color: #A67B5B;
-    text-align: center;
-    padding: 10px 0;
-}
+/* Utility */
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+.section{padding:64px 0}
+.section-title{font-family:"Playfair Display",serif;font-size:28px;margin:0 0 18px}
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
+/* Skip link */
+.skip-link{position:absolute;left:-999px;top:auto;background:#111;color:#fff;padding:8px 12px;z-index:999}
+.skip-link:focus{left:10px;top:10px;border-radius:6px}
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+/* Header */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:60;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(248,244,239,0.9), rgba(248,244,239,0.8));
+  border-bottom: 1px solid rgba(107,85,75,0.06);
 }
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 20px}
+.logo img{display:block;height:auto}
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+/* Nav */
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:18px;align-items:center}
+.nav-list a{color:var(--cafe);text-decoration:none;font-weight:500}
+.header-ctas{display:flex;align-items:center;gap:10px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;transition:var(--transition);cursor:pointer}
+.btn-primary{background:var(--cafe);color:var(--white);box-shadow:var(--shadow)}
+.btn-primary:hover{transform:translateY(-3px)}
+.btn-outline{background:transparent;border:1px solid rgba(107,85,75,0.12);color:var(--cafe)}
+.btn-sm{padding:8px 12px;border-radius:8px;font-size:14px}
+.btn.large{padding:14px 22px;font-size:18px;border-radius:12px}
+
+/* Hamburger */
+.menu-toggle{display:none;background:transparent;border:0;padding:8px;cursor:pointer}
+.hamburger{width:22px;height:2px;background:var(--cafe);display:block;position:relative}
+.hamburger::after,.hamburger::before{content:"";position:absolute;left:0;width:22px;height:2px;background:var(--cafe);transition:var(--transition)}
+.hamburger::before{top:-6px}
+.hamburger::after{top:6px}
+
+/* HERO */
+.hero{padding:80px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 520px;align-items:center;gap:36px}
+.hero-content h1{font-family:"Playfair Display",serif;font-size:48px;margin:0 0 12px;color:var(--cafe)}
+.lead{color:var(--muted);font-size:18px;margin:0 0 20px}
+.hero-actions{display:flex;gap:12px;margin-bottom:18px}
+.hero-mini{display:flex;gap:12px;margin-top:8px}
+.mini-card{background:var(--white);padding:12px;border-radius:10px;box-shadow:var(--shadow);font-size:14px}
+
+/* Hero media */
+.hero-media img{width:100%;border-radius:14px;display:block;box-shadow:var(--shadow);transform-origin:center center;transition:transform var(--transition)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:420px 1fr;gap:28px;align-items:center}
+.about-image{width:100%;border-radius:12px;box-shadow:var(--shadow)}
+
+/* Products */
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:18px}
+.product-card{background:var(--white);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.product-card img{width:100%;height:220px;object-fit:cover}
+.product-body{padding:16px}
+.product-meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.price{color:var(--cafe);font-weight:700}
+
+/* Testimonials */
+.testimonials-row{display:flex;gap:18px;flex-wrap:wrap}
+.testimonial{background:var(--beige);padding:20px;border-radius:12px;flex:1;min-width:240px}
+
+/* Location */
+.location-grid{display:grid;grid-template-columns:1fr 460px;gap:28px;align-items:start}
+.location-map iframe{width:100%;height:260px;border:0;border-radius:12px}
+
+/* CTA */
+.cta-block{background:var(--beige);padding:36px;border-radius:12px;text-align:center;box-shadow:var(--shadow)}
+.cta-block h2{margin:0 0 8px}
+
+/* Footer */
+.site-footer{background:var(--cafe);color:var(--cream);padding:36px 0}
+.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.footer-grid a{color:var(--cream);text-decoration:none}
+
+/* Responsive */
+@media (max-width:992px){
+  .hero-grid{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr;gap:18px}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .location-grid{grid-template-columns:1fr}
+  .nav-list{display:none}
+  .menu-toggle{display:block}
+  .header-ctas .btn-outline{display:none}
 }
-
-/* Secciones */
-section {
-    padding: 20px;
-    text-align: center;
-}
-
-img {
-    width: 300px;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-/* Menú */
-.menu-item {
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-}
-
-/* Pie de página */
-footer {
-    text-align: center;
-    background-color: #8B5A2B;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
+@media (max-width:600px){
+  .hero-grid{grid-template-columns:1fr;gap:20px}
+  .hero-content h1{font-size:32px}
+  .product-card img{height:180px}
+  .products-grid{grid-template-columns:1fr}
 }
