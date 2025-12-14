@@ -1,65 +1,233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="pageTitle">Cafetería Delicias</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cafetería Delicias — Café artesanal y desayunos</title>
+  <meta name="description" content="Cafetería Delicias: café artesanal, desayunos y repostería casera. Ven a probar nuestro blend local y reserva tu mesa." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Cafetería Delicias",
+    "address": {"@type":"PostalAddress","addressLocality":"TuCiudad","addressRegion":"TuProvincia","streetAddress":"Calle Ejemplo 12"},
+    "telephone": "+34 600 000 000",
+    "openingHours": "Mo-Su 08:00-20:00",
+    "url": "https://cafeteriadelicias.netlify.app/"
+  }
+  </script>
 </head>
 <body>
-  <header class="bg-dark text-white p-3 d-flex justify-content-between align-items-center">
-    <h1 data-i18n="welcomeTitle">Bienvenid@ a Cafetería Delicias</h1>
-    <select id="language-selector" class="form-select w-auto">
-      <option value="es">Español</option>
-      <option value="en">English</option>
-      <option value="gl">Galego</option>
-    </select>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/" aria-label="Cafetería Delicias - Inicio">
+        <img src="assets/logo-mono.svg" alt="Cafetería Delicias logo" width="140" height="36">
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-ctas">
+        <a class="btn btn-outline" href="#menu" id="btn-menu">Ver carta</a>
+        <a class="btn btn-primary" href="#contacto" id="btn-reservar">Reservar</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section id="intro">
-      <p data-i18n="welcomeText">Disfruta del mejor café en un entorno acogedor y con productos artesanales.</p>
-    </section>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 id="hero-title">Sabor artesanal en cada taza</h1>
+          <p class="lead">Blend local, recetas cuidadas y un rincón pensado para ti. Desayunos, brunch y pastelería casera.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#menu">Ver carta</a>
+            <a class="btn btn-outline" href="#contacto">Reservar mesa</a>
+          </div>
+          <div class="hero-mini">
+            <div class="mini-card">
+              <strong>Horario</strong>
+              <span>Lu-Dom · 08:00 – 20:00</span>
+            </div>
+            <div class="mini-card">
+              <strong>Dirección</strong>
+              <span>C/ Ejemplo 12, TuCiudad</span>
+            </div>
+          </div>
+        </div>
 
-    <nav>
-      <ul>
-        <li><a href="#inicio" data-i18n="navInicio">Inicio</a></li>
-        <li><a href="#menu" data-i18n="navMenu">Menú</a></li>
-        <li><a href="#contacto" data-i18n="navContacto">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <section id="inicio">
-      <h2 data-i18n="aboutUsTitle">Sobre Nosotros</h2>
-      <p data-i18n="aboutUsText">
-        En Cafetería Delicias te ofrecemos una experiencia única con nuestros cafés seleccionados y nuestra repostería artesanal.
-      </p>
-      <img src="coffee.jpg" alt="Café recién hecho" />
-    </section>
-
-    <section id="menu">
-      <h2 data-i18n="menuTitle">Nuestro Menú</h2>
-      <div class="menu-item">
-        <img src="pastel.jpg" alt="Pastel de chocolate" />
-        <p data-i18n="item1">Pastel de Chocolate - 3.50€</p>
+        <div class="hero-media" role="img" aria-label="Taza de café artesanal con crema">
+          <img
+            src="assets/hero-1200.webp"
+            srcset="assets/hero-600.webp 600w, assets/hero-900.webp 900w, assets/hero-1200.webp 1200w"
+            sizes="(max-width: 600px) 100vw, (max-width: 992px) 50vw, 600px"
+            alt="Taza de café artesanal y repostería"
+            loading="lazy">
+        </div>
       </div>
-      <div class="menu-item">
-        <img src="croissant.jpg" alt="Croissant" />
-        <p data-i18n="item2">Croissant - 2.00€</p>
+    </section>
+
+    <!-- PRESENTACION -->
+    <section id="about" class="section section-about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <img class="about-image" src="assets/about-600.webp" alt="Interior de la cafetería" loading="lazy">
+        <div class="about-text">
+          <h2 id="about-title">Un rincón con aroma a casa</h2>
+          <p>Nuestras recetas nacen de la tradición y del cariño por los ingredientes. Trabajamos con pequeños productores locales y tostamos nuestro propio blend.</p>
+          <ul class="values">
+            <li>Tostado local</li>
+            <li>Ingredientes naturales</li>
+            <li>Opciones veganas</li>
+          </ul>
+          <a class="btn btn-outline" href="#productos">Nuestros productos</a>
+        </div>
       </div>
     </section>
 
-    <section id="contacto">
-      <h2 data-i18n="contactTitle">Contacto</h2>
-      <p data-i18n="address">📍 Dirección: Calle Dulce, 123 - Ciudad Café</p>
-      <p data-i18n="phone">📞 Teléfono: 123 456 789</p>
+    <!-- PRODUCTOS DESTACADOS -->
+    <section id="productos" class="section section-products" aria-labelledby="productos-title">
+      <div class="container">
+        <h2 id="productos-title" class="section-title">Productos destacados</h2>
+        <div class="products-grid" role="list">
+          <article class="product-card" role="listitem">
+            <img src="assets/prod-1-600.webp" alt="Café espresso doble" loading="lazy">
+            <div class="product-body">
+              <h3>Café Espresso Doble</h3>
+              <p class="muted">Intenso, con notas a chocolate</p>
+              <div class="product-meta">
+                <span class="price">€2.50</span>
+                <a class="btn btn-sm" href="#contacto">Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" role="listitem">
+            <img src="assets/prod-2-600.webp" alt="Cappuccino crema" loading="lazy">
+            <div class="product-body">
+              <h3>Cappuccino</h3>
+              <p class="muted">Espuma sedosa y cacao</p>
+              <div class="product-meta">
+                <span class="price">€3.00</span>
+                <a class="btn btn-sm" href="#contacto">Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" role="listitem">
+            <img src="assets/prod-3-600.webp" alt="Tarta casera" loading="lazy">
+            <div class="product-body">
+              <h3>Tarta del día</h3>
+              <p class="muted">Repostería casera, consultad en local</p>
+              <div class="product-meta">
+                <span class="price">€4.50</span>
+                <a class="btn btn-sm" href="#contacto">Pedir</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
+
+    <!-- EXPERIENCIA / TESTIMONIOS -->
+    <section id="experiencia" class="section section-testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <h2 id="testimonials-title" class="section-title">Lo que dicen nuestros clientes</h2>
+        <div class="testimonials-row">
+          <blockquote class="testimonial">
+            <p>“Un café con personalidad. Ambiente acogedor y el personal es encantador.”</p>
+            <footer>— Marta R.</footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>“El mejor cappuccino de la ciudad. Repetiré seguro.”</p>
+            <footer>— Alberto G.</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU / PDF -->
+    <section id="menu" class="section section-menu" aria-labelledby="menu-title">
+      <div class="container">
+        <h2 id="menu-title" class="section-title">Carta rápida</h2>
+        <p class="muted">Descarga nuestra carta completa en PDF o consulta en el local.</p>
+        <a class="btn btn-outline" href="assets/menu.pdf" target="_blank" rel="noopener">Descargar carta (PDF)</a>
+      </div>
+    </section>
+
+    <!-- UBICACION -->
+    <section id="ubicacion" class="section section-location" aria-labelledby="ubicacion-title">
+      <div class="container location-grid">
+        <div class="location-text">
+          <h2 id="ubicacion-title">Visítanos</h2>
+          <p>C/ Ejemplo 12, TuCiudad · Abierto todos los días</p>
+          <ul class="contact-list">
+            <li><strong>Tel:</strong> <a href="tel:+34600000000">+34 600 000 000</a></li>
+            <li><strong>Horario:</strong> Lu-Dom 08:00 – 20:00</li>
+          </ul>
+          <a class="btn btn-primary" href="https://wa.me/34600000000" target="_blank" rel="noopener">Contactar por WhatsApp</a>
+        </div>
+
+        <div class="location-map" aria-hidden="true">
+          <!-- placeholder map: reemplaza por embed real -->
+          <iframe title="Mapa Cafetería Delicias" src="https://www.google.com/maps/embed?pb=!1m18!..." loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section section-cta" aria-labelledby="cta-title">
+      <div class="container cta-block">
+        <h2 id="cta-title">Ven y descubre tu nuevo lugar favorito</h2>
+        <p class="muted">Reserva ahora o pásate cuando quieras — estaremos encantados de atenderte.</p>
+        <a class="btn btn-primary large" href="#contacto">Reservar mesa</a>
+      </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contacto" class="site-footer" aria-labelledby="footer-title">
+      <div class="container footer-grid">
+        <div>
+          <img src="assets/logo-mono-light.svg" alt="Cafetería Delicias logo" width="120">
+          <p class="muted">Café artesanal • Desayunos • Repostería casera</p>
+        </div>
+
+        <div>
+          <h3 id="footer-title">Contacto</h3>
+          <ul class="contact-list">
+            <li><a href="tel:+34600000000">+34 600 000 000</a></li>
+            <li><a href="mailto:info@cafeteriadelicias.example">info@cafeteria.example</a></li>
+            <li>C/ Ejemplo 12, TuCiudad</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Síguenos</h3>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+          </div>
+          <p class="muted small">© <span id="year"></span> Cafetería Delicias</p>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <footer>
-    <p data-i18n="footerText">&copy; 2025 Cafetería Delicias - Todos los derechos reservados</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
