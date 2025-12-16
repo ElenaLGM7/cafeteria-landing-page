@@ -36,17 +36,18 @@
 
 <a class="skip-link" href="#main">Saltar al contenido</a>
 
-<header class="site-header">
+<header class="site-header" id="site-header">
   <div class="container header-inner">
 
     <a class="logo" href="/" aria-label="Cafetería Delicias - Inicio">
-      <img src="assets/images/logo-navbar.png"
-           alt="Cafetería Delicias"
-           width="120"
-           height="40">
+      <img
+        src="assets/images/Cafetería Delicias logo.svg"
+        alt="Cafetería Delicias"
+        width="140"
+        height="140">
     </a>
 
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" id="primary-nav" aria-label="Navegación principal">
       <ul class="nav-list">
         <li><a href="#productos">Productos</a></li>
         <li><a href="#about">Nuestra historia</a></li>
@@ -59,7 +60,10 @@
       <a class="btn btn-outline" href="#menu">Ver carta</a>
       <a class="btn btn-primary" href="#contacto">Reservar</a>
 
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <button class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menú"
+        aria-expanded="false">
         <span class="hamburger" aria-hidden="true"></span>
       </button>
     </div>
@@ -70,11 +74,11 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="hero hero-editorial">
+  <section class="hero hero-editorial" aria-labelledby="hero-title">
     <div class="container hero-grid">
 
       <div class="hero-content">
-        <h1>
+        <h1 id="hero-title">
           Sabor artesanal<br>
           en cada taza
         </h1>
@@ -89,22 +93,15 @@
           <a class="btn btn-outline" href="#ubicacion">Cómo llegar</a>
         </div>
 
-        <p class="hero-note">
+        <p class="hero-note muted">
           Abierto todos los días · 08:00 – 20:00 · C/ Ejemplo 12
         </p>
       </div>
 
       <div class="hero-media">
         <img
-          src="assets/images/hero-1200.webp"
-          srcset="
-            assets/images/hero-600.webp 600w,
-            assets/images/hero-900.webp 900w,
-            assets/images/hero-1200.webp 1200w"
-          sizes="(max-width: 600px) 100vw,
-                 (max-width: 992px) 50vw,
-                 600px"
-          alt="Interior de Cafetería Delicias"
+          src="assets/images/coffeeshop interior.jpg"
+          alt="Interior de la cafetería"
           loading="eager">
       </div>
 
@@ -112,17 +109,17 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section section-about">
+  <section id="about" class="section section-about" aria-labelledby="about-title">
     <div class="container about-grid">
 
       <img
         class="about-image"
-        src="assets/images/about.webp"
+        src="assets/images/coffeeshop interior.jpg"
         alt="Interior de la cafetería"
         loading="lazy">
 
       <div class="about-text">
-        <h2>Un rincón con aroma a casa</h2>
+        <h2 id="about-title">Un rincón con aroma a casa</h2>
 
         <p>
           Creemos en el café hecho con tiempo y en los lugares que invitan
@@ -140,24 +137,32 @@
   </section>
 
   <!-- PRODUCTOS -->
-  <section id="productos" class="section section-products">
+  <section id="productos" class="section section-products" aria-labelledby="productos-title">
     <div class="container">
 
-      <h2 class="section-title">Nuestros imprescindibles</h2>
+      <h2 id="productos-title" class="section-title">
+        Nuestros imprescindibles
+      </h2>
 
       <div class="products-grid">
 
         <article class="product-card">
-          <img src="assets/images/product-espresso.webp" alt="Espresso doble">
+          <img
+            src="assets/images/coffee.jpg"
+            alt="Café espresso doble"
+            loading="lazy">
           <div class="product-body">
-            <h3>Espresso doble</h3>
+            <h3>Espresso Doble</h3>
             <p class="muted">Intenso, con notas a chocolate</p>
             <span class="price">€2.50</span>
           </div>
         </article>
 
         <article class="product-card">
-          <img src="assets/images/product-cappuccino.webp" alt="Cappuccino">
+          <img
+            src="assets/images/coffee 2.jpg"
+            alt="Cappuccino"
+            loading="lazy">
           <div class="product-body">
             <h3>Cappuccino</h3>
             <p class="muted">Espuma sedosa y cacao</p>
@@ -166,10 +171,13 @@
         </article>
 
         <article class="product-card">
-          <img src="assets/images/product-cake.webp" alt="Tarta casera">
+          <img
+            src="assets/images/pastel.jpg"
+            alt="Tarta casera"
+            loading="lazy">
           <div class="product-body">
             <h3>Tarta del día</h3>
-            <p class="muted">Repostería artesanal</p>
+            <p class="muted">Repostería casera</p>
             <span class="price">€4.50</span>
           </div>
         </article>
@@ -178,13 +186,53 @@
     </div>
   </section>
 
-  <!-- UBICACIÓN -->
-  <section id="ubicacion" class="section section-location">
+  <!-- TESTIMONIOS -->
+  <section class="section section-testimonials" aria-labelledby="testimonials-title">
+    <div class="container">
+
+      <h2 id="testimonials-title" class="section-title">
+        Lo que dicen nuestros clientes
+      </h2>
+
+      <div class="testimonials-row">
+        <blockquote class="testimonial">
+          <p>“Un café con personalidad y un ambiente acogedor.”</p>
+          <footer>— Marta R.</footer>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p>“El mejor cappuccino de la ciudad.”</p>
+          <footer>— Alberto G.</footer>
+        </blockquote>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="section section-menu" aria-labelledby="menu-title">
+    <div class="container">
+      <h2 id="menu-title" class="section-title">Nuestra carta</h2>
+      <p class="muted">Consulta nuestra carta completa en PDF.</p>
+      <a class="btn btn-outline" href="assets/menu.pdf" target="_blank" rel="noopener">
+        Descargar carta
+      </a>
+    </div>
+  </section>
+
+  <!-- UBICACION (NO TOCADO) -->
+  <section id="ubicacion" class="section section-location" aria-labelledby="ubicacion-title">
     <div class="container location-grid">
 
-      <div>
-        <h2>Visítanos</h2>
+      <div class="location-text">
+        <h2 id="ubicacion-title">Visítanos</h2>
         <p>C/ Ejemplo 12, TuCiudad</p>
+
+        <ul class="contact-list">
+          <li><strong>Horario:</strong> 08:00 – 20:00</li>
+          <li><strong>Tel:</strong> <a href="tel:+34600000000">+34 600 000 000</a></li>
+        </ul>
+
         <a class="btn btn-primary" href="https://wa.me/34600000000" target="_blank">
           Contactar por WhatsApp
         </a>
@@ -193,12 +241,19 @@
       <div class="location-map">
         <iframe
           title="Mapa Cafetería Delicias"
-          src="https://www.google.com/maps?q=Calle%20Ejemplo%2012%20TuCiudad&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          src="https://www.google.com/maps/embed?pb=!1m18!..."
+          loading="lazy">
         </iframe>
       </div>
 
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section section-cta" aria-labelledby="cta-title">
+    <div class="container cta-block">
+      <h2 id="cta-title">Tu pausa favorita empieza aquí</h2>
+      <a class="btn btn-primary large" href="#contacto">Reservar mesa</a>
     </div>
   </section>
 
@@ -208,7 +263,7 @@
   <div class="container footer-grid">
 
     <div>
-      <img src="assets/images/logo-light.svg" alt="Cafetería Delicias" width="120">
+      <img src="assets/images/Cafetería Delicias logo SF.svg" alt="Cafetería Delicias" width="120">
       <p class="muted">Café artesanal · Desayunos · Repostería casera</p>
     </div>
 
@@ -217,16 +272,23 @@
       <ul class="contact-list">
         <li><a href="tel:+34600000000">+34 600 000 000</a></li>
         <li><a href="mailto:info@cafeteriadelicias.example">info@cafeteriadelicias.example</a></li>
+        <li>C/ Ejemplo 12, TuCiudad</li>
       </ul>
     </div>
 
     <div>
       <h3>Síguenos</h3>
-      <p class="muted small">© 2025 Cafetería Delicias</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+      </div>
+      <p class="muted small">© <span id="year"></span> Cafetería Delicias</p>
     </div>
 
   </div>
 </footer>
+
+<script src="main.js" defer></script>
 
 </body>
 </html>
